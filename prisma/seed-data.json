@@ -1,0 +1,372 @@
+{
+ "highlights": [
+  {
+   "icon": "<path d=\"M6 2.5h8.5L18.5 6.5V21.5H6Z\"/><path d=\"M14.5 2.5V6.5H18.5\"/><path d=\"M8.7 11.5h7M8.7 14.5h7M8.7 17.5h4.5\"/>",
+   "title": "Freehold Land",
+   "subtitle": "A rare foundation in Mumbai"
+  },
+  {
+   "icon": "<path d=\"M2 7c1.5-1.7 3-1.7 4.5 0s3 1.7 4.5 0 3-1.7 4.5 0 3-1.7 4.5 0\"/><path d=\"M2 12c1.5-1.7 3-1.7 4.5 0s3 1.7 4.5 0 3-1.7 4.5 0 3-1.7 4.5 0\"/><path d=\"M2 17c1.5-1.7 3-1.7 4.5 0s3 1.7 4.5 0 3-1.7 4.5 0 3-1.7 4.5 0\"/>",
+   "title": "4.6 Acres",
+   "subtitle": "An expansive setting"
+  },
+  {
+   "icon": "<path d=\"M12 3.2a4 4 0 0 1 3.3 6.3 3.6 3.6 0 0 1-1 7H9.7a3.6 3.6 0 0 1-1-7A4 4 0 0 1 12 3.2Z\"/><path d=\"M12 16.5V21\"/>",
+   "title": "Forest Garden",
+   "subtitle": "Nature on Mother Earth"
+  },
+  {
+   "icon": "<path d=\"M4 21V9.5a8 8 0 0 1 16 0V21\"/><path d=\"M8 21v-9.5a4 4 0 0 1 8 0V21\"/><path d=\"M2.5 21h19\"/>",
+   "title": "Grand Lobbies",
+   "subtitle": "Double-height entrance experience"
+  },
+  {
+   "icon": "<path d=\"M4 21V11h16v10\"/><path d=\"M2.5 11h19\"/><path d=\"M8 21v-5h8v5\"/><circle cx=\"17\" cy=\"5.5\" r=\"2\"/><path d=\"M17 1.8v.9M20.7 5.5h-.9M14.2 2.9l.6.6M19.8 2.9l-.6.6\"/>",
+   "title": "Rooftop Amenities",
+   "subtitle": "A weekend away at home"
+  },
+  {
+   "icon": "<path d=\"M3.5 17.5h17\"/><path d=\"M7 17.5a5 5 0 0 1 10 0\"/><path d=\"M12 3.8v3.4M5.3 8.6l2 2M18.7 8.6l-2 2\"/>",
+   "title": "Sky-Level",
+   "subtitle": "Pools & Decks"
+  },
+  {
+   "icon": "<path d=\"M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 18h18M3 15h18M6 11V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2\"/>",
+   "title": "4 & 5 Bed",
+   "subtitle": "Residences with private decks"
+  },
+  {
+   "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7.3l1.5 3.2 3.2 1.5-3.2 1.5-1.5 3.2-1.5-3.2L7.3 12l3.2-1.5z\"/><text x=\"3.3\" y=\"13.6\" font-size=\"5.5\" font-family=\"Arial,sans-serif\" style=\"fill:var(--accent);stroke:none\">E</text><text x=\"15.6\" y=\"13.6\" font-size=\"5.5\" font-family=\"Arial,sans-serif\" style=\"fill:var(--accent);stroke:none\">W</text>",
+   "title": "East–West Open",
+   "subtitle": "Light from both directions"
+  }
+ ],
+ "amenities": [
+  {
+   "icon": "<path d=\"M3 15c2 0 2-1.5 4.5-1.5S9.5 15 12 15s2.5-1.5 4.5-1.5S19 15 21 15\"/><path d=\"M3 19c2 0 2-1.5 4.5-1.5S9.5 19 12 19s2.5-1.5 4.5-1.5S19 19 21 19\"/><path d=\"M8 12V5.5a2 2 0 0 1 4 0M16 12V5.5a2 2 0 0 0-4 0M8 8h8\"/>",
+   "name": "Swimming Pool"
+  },
+  {
+   "icon": "<path d=\"M6.5 7.5v9M17.5 7.5v9M4 9.5v5M20 9.5v5M6.5 12h11\"/>",
+   "name": "Gymnasium"
+  },
+  {
+   "icon": "<path d=\"M12 18c-3.5 0-6.5-2.2-7.5-5.5 2.7-.3 5.6 1 7.5 3.5 1.9-2.5 4.8-3.8 7.5-3.5-1 3.3-4 5.5-7.5 5.5z\"/><path d=\"M12 16c-1.6-1.9-2.2-4.6-1.2-7.2L12 6l1.2 2.8c1 2.6.4 5.3-1.2 7.2z\"/>",
+   "name": "Yoga Studio"
+  },
+  {
+   "icon": "<path d=\"M3 12h4l2-5 3.5 10 2.5-6.5 1.5 1.5H21\"/>",
+   "name": "Freestyle Fitness Studio"
+  },
+  {
+   "icon": "<path d=\"M12 20v-6\"/><path d=\"M12 14c-3.3 0-5.5-2.4-5.5-5.3C6.5 5.8 9 3.5 12 3.5s5.5 2.3 5.5 5.2c0 2.9-2.2 5.3-5.5 5.3z\"/><path d=\"M4 20.5h16\"/>",
+   "name": "Landscaped Lawns"
+  },
+  {
+   "icon": "<path d=\"M5 11V8.5A2.5 2.5 0 0 1 7.5 6h9A2.5 2.5 0 0 1 19 8.5V11\"/><path d=\"M3.5 11.5a1.5 1.5 0 0 1 3 0V14h11v-2.5a1.5 1.5 0 0 1 3 0V17h-17z\"/><path d=\"M5.5 17v2M18.5 17v2\"/>",
+   "name": "Residents' Lounge"
+  },
+  {
+   "icon": "<rect x=\"2.5\" y=\"6\" width=\"19\" height=\"12\" rx=\"6\"/><rect x=\"6\" y=\"9\" width=\"12\" height=\"6\" rx=\"3\"/><path d=\"M12 6v3\"/>",
+   "name": "Walking Track"
+  }
+ ],
+ "legal": [
+  {
+   "title": "General Disclaimer",
+   "paragraphs": [
+    {
+     "kind": "numbered",
+     "content": "The development of project named “The Grand” is to comprise of 3 towers that is The Grand Tower 1, The Grand Tower 2, The Grand Tower 3 respectively."
+    },
+    {
+     "kind": "numbered",
+     "content": "The Grand Tower 1 has been registered with the registration number P51900076793. The project details are available on the website <a href=\"https://maharerait.maharashtra.gov.in\" target=\"_blank\" rel=\"noopener\">www.maharerait.maharashtra.gov.in</a>"
+    },
+    {
+     "kind": "numbered",
+     "content": "The information, visuals, graphics, images, layouts, dimensions, specifications, building elevations, amenities and facilities shown on this website are for general information purposes only. The content on this website does not constitute an offer, an invitation to offer, a commitment, an obligation or a binding contract of any nature between the developer and the recipient or viewer."
+    },
+    {
+     "kind": "numbered",
+     "content": "All floor plans, drawings, amenities and specifications are subject to the approval of the respective authorities, including the Municipal Corporation of Greater Mumbai (MCGM/BMC)."
+    },
+    {
+     "kind": "numbered",
+     "content": "The common areas and facilities proposed are subject to change. The developer reserves the right to make changes, alterations or revisions to the project, project layouts including the building layout, amenities, elevations, floor plans, specifications and dimensions, from time to time without prior notice, at the developer’s sole discretion."
+    },
+    {
+     "kind": "numbered",
+     "content": "The images on this website include artist’s impressions, computer-generated images and stock photography. They do not represent the actual or final delivery of the building, apartments, finishes, amenities or landscaping. Views shown are indicative only and are subject to change as per actual site conditions and future developments."
+    },
+    {
+     "kind": "numbered",
+     "content": "Customers and viewers are advised to independently verify all details, including approvals, RERA registration status, amenities and specifications, before making any purchase decision or acting in any manner."
+    },
+    {
+     "kind": "numbered",
+     "content": "The developer, its employees and its agents shall not be liable for any loss, damage or expense arising from the use of, or reliance on, information provided on this website."
+    },
+    {
+     "kind": "numbered",
+     "content": "All transactions in respect of this project shall be subject to the terms and conditions of the Agreement for Sale to be entered into between the promoter/developer and the purchaser."
+    },
+    {
+     "kind": "numbered",
+     "content": "The furniture, fixtures, home décor and interiors displayed are not provided with the flats. They are shown solely to help the viewer visualize the flat interiors and shall not be considered an offer, promise or commitment of any nature. All apartments will be sold bareshell as per provisions of the Agreement for Sale."
+    },
+    {
+     "kind": "numbered",
+     "content": "The landmarks indicated on the map (if any) maybe subject to change and to which the Developer/Promoter has no control."
+    },
+    {
+     "kind": "numbered",
+     "content": "The Grand Tower 1 is subject to mortgage created in favour of the Union Bank of India whose no objection would be obtained at the relevant time as required."
+    },
+    {
+     "kind": "numbered",
+     "content": "The Developer/Promoter reserves the rights to vary the dimensions in the floor plans. The furniture, fixtures, fittings that may be depicted in the floor plans and are not part of standard offering and are purely illustrative."
+    },
+    {
+     "kind": "numbered",
+     "content": "Any legal disputes arising from your use of this website will be governed by the laws of the State of Maharashtra and will be resolved by the courts at Mumbai."
+    }
+   ]
+  },
+  {
+   "title": "Terms & Conditions",
+   "paragraphs": [
+    {
+     "kind": "numbered",
+     "content": "This website i.e. www.homesatthegrand.com (“Website”) is a website for THE GRAND TOWER 1 (“Project”) being developed and owned by Mr. Samir N. Bhojwani (“Developer/Promoter”)"
+    },
+    {
+     "kind": "numbered",
+     "content": "Further using the contents, information, details and materials disclosed on this Website for the purposes of any illustrations, photographs, video or audio, renders, artist impressions, sequences or any graphics separately from any accompanying text is not permitted."
+    },
+    {
+     "kind": "numbered",
+     "content": "If any of the terms and conditions contained in this Website are illegal or not enforceable, the same shall not affect the legality or enforceability of the remaining terms and conditions."
+    },
+    {
+     "kind": "numbered",
+     "content": "The contents, graphics, images, information as disclosed or depicted on this Website are the exclusive property of the Developer / Promoter. No person shall use, copy, reproduce, publish, display, modify, create derivative works or database, sell or distribute the same in whole or in part. A point of any page or portion of text material from the website through computer / electronic device does not tantamount to prior written consent and will be strongly dealt with."
+    },
+    {
+     "kind": "numbered",
+     "content": "You shall use the Website only for lawful purposes and in accordance with the Website terms and conditions. You shall be completely and solely responsible and liable for any charges, taxes, duties, fees and any other charges that arise in connection with your use of the Website. You shall not in any manner interfere with the software or any other technical aspect of the Website or use the Website in any manner that could disrupt, damage, disable, or adversely affect any server of the Developer/Promoter or any networks or operating systems connected to the server of the Developer / Promoter. You shall also not use the Website in a manner that interferes with or impedes the use of the Website by other users. You shall not attempt to gain access to the Website through unethical and/or illegal means including hacking. You shall not attempt to alter the contents of the Website in any manner or post any abusive or defamatory content on the Website."
+    },
+    {
+     "kind": "numbered",
+     "content": "The Website, the information, the content and software therein are made available to you on an “as is” basis by the Developer / Promoter without any warranty, express or implied, of any kind including but not limited to and the Developer/Promoter shall under no circumstance and in no event be responsible or liable for any loss or damage (direct, indirect, consequential, incidental or otherwise, whether by way of loss of profits or loss of business opportunity, business interruption or loss of information or data or programs), arising in any manner whatsoever whether in contract, law, tort, or any other basis, that you may suffer out of your use of the Website and/or your reliance on the Website and/or any information therein."
+    },
+    {
+     "kind": "numbered",
+     "content": "This Website makes available information / material on the Developer / Promoter, its projects developed / being developed and connected information exclusively in the nature of general information and should not be construed as advice (including technical and/or legal advice) in any manner. The Website may contain technical data like layout plans, site plans, plot size, apartment / flat size, project status and completion dates etc. as also pictures / photographs (including actual / stock / standard photography or rendered images) of various projects developed and constructed or in the process of being developed and constructed by the Developer/Promoter. All such information is provided for general information only, without warranties, guarantees, undertaking or term as to the condition, quality, state of readiness or fitness of any kind, either expressed or implied as to its completeness, accuracy, reliability, suitability or availability."
+    },
+    {
+     "kind": "numbered",
+     "content": "Our Privacy Policy sets out the terms on which we process any and all personal data we collect from you or that you provide to us. By using our website, you consent to such processing and you confirm that all data provided by you is accurate."
+    },
+    {
+     "kind": "numbered",
+     "content": "In no event shall the Developer/Promoter be liable for any direct, indirect, incidental and/or consequential claims, loss and/or damage whatsoever arising out of the use of the information on the Website."
+    },
+    {
+     "kind": "numbered",
+     "content": "The Website terms and conditions shall be governed by the laws of India and the courts in Mumbai shall have exclusive jurisdiction in respect of any matter or dispute arising out of or in respect of the website terms and conditions."
+    },
+    {
+     "kind": "numbered",
+     "content": "All transactions shall be subject to the agreement for sale to be entered into between Developer / Promoter and the intending party."
+    },
+    {
+     "kind": "numbered",
+     "content": "The Developer / Promoter does not make any assurance or guarantee that the Website will operate continuously or be error free. Though we have taken all the requisite care and precaution to make your experience of navigating and browsing our Website an enjoyable and secure experience, we do not guarantee or warrant that the Website or any link to the Website will be free from destructive software agents and will not be liable for any interference or damage to your computer system in connection with your use of the Website and any link to the Website. You must take your own precautions to ensure that your computer and its operating system has the necessary technical specifications and safeguards for use of the website."
+    },
+    {
+     "kind": "numbered",
+     "content": "Your reliance on the Website or any information contained in the Website is entirely at your own responsibility and risk and the Developer / Promoter assumes no responsibility and shall not in any way be liable in this regard."
+    },
+    {
+     "kind": "numbered",
+     "content": "The Website is solely for your personal non-commercial use and you must ensure that your use of the Website is exclusively for this purpose. The Developer/Promoter only grants you a non-exclusive, limited right to use the Website. You shall not claim any other right in respect of the Website."
+    },
+    {
+     "kind": "numbered",
+     "content": "Before making a decision to purchase, the users are requested to independently, either directly or through their legal / technical / financial consultants, thoroughly verify all details / documents pertaining to the project as available on <a href=\"http://maharera.mahaonline.gov.in/\" target=\"_blank\" rel=\"noopener\">http://maharera.mahaonline.gov.in/</a>."
+    },
+    {
+     "kind": "numbered",
+     "content": "Accessing / visiting this Website does not constitute an offer and/or contract of any type between the Developer / Promoter and the viewer / recipient. None of our representatives or employees or consultants or agents or any person claiming through or under us has any authority to make or give any representation or warranty of any nature whatsoever in relation to the property. None of the information, materials or details mentioned on our website shall be regarded or taken as legal, technical or financial advice and a thorough diligence of the same may be undertaken by you in that regard."
+    },
+    {
+     "kind": "numbered",
+     "content": "By proceeding to view this Website and/or part thereof and/or any linked sites and/or any specific project related detail as disclosed on this Website for any purpose and in any manner including general browsing, response / feedback, availing of services or downloading content it is presumed that you have read, understood and have agreed to abide by and be governed by these terms and conditions read along with any other terms and conditions governing the use of this Website. These terms and conditions may be varied / revised from time to time and the varied / revised terms and conditions will be deemed to be effective immediately upon posting the updated terms and conditions on the website."
+    },
+    {
+     "kind": "numbered",
+     "content": "The rights in terms of all the intellectual property on our Website is held by the Developer/Promoter either as the owner or as a licensee. On visiting and browsing this Website, you have deemed to have acknowledged and accepted that all of the copyright, database rights and any other intellectual property rights which subsist in the design, layout, processes, functions, data and content of this Website belong to the Developer/Promoter or our licensors, information providers or contributors, as the case may be and we reserve all our rights in that regard. No part of this Website, its contents or any of its underlying software and databases can be shared with any third party, reverse engineered, reverse assembled without our prior written consent."
+    },
+    {
+     "kind": "numbered",
+     "content": "This Website is meant to provide you with all general information regarding the project “THE GRAND TOWER 1” and we therefore request you to refrain from misusing and/or tampering with the Website in any manner as the same will subject you to necessary action under applicable laws and regulations."
+    },
+    {
+     "kind": "numbered",
+     "content": "All plans, specifications, designs, elevations, features, amenities, facilities and services mentioned in this website are indicative of the kind of development proposed and/or being undertaken for the project and its finality is subject to the approval of the respective authorities. The Developer/Promoter reserves the right to change any and/or all of information, materials, images, project details visible on the website without any obligation to notify you or any other past, present or prospective user of the Website. Although the Developer/Promoter makes reasonable efforts to update the information and content on the Website, it may be noted that some information and content may be out of date at any given time, and the Developer / Promoter is under no obligation to update it."
+    },
+    {
+     "kind": "numbered",
+     "content": "You are further advised to check / ensure that you are dealing with official “RERA Registered” real estate agent(s) only."
+    },
+    {
+     "kind": "numbered",
+     "content": "Please note that this Website is the only website of the project “THE GRAND TOWER 1”. You are cautioned and advised to only visit this Website and not to rely upon any information / data contained on any other unauthorized / unofficial websites which may appear to be similar to this Website, including any sites containing Developer / Promoter’s logo / brand name."
+    },
+    {
+     "kind": "numbered",
+     "content": "The Website may contain links to other websites (“Linked Websites”). These links are provided only for convenience and information. The Developer/Promoter has no control over the content or the availability of Linked Websites and has not reviewed the information on the Linked Websites. The Developer/Promoter shall not be responsible or liable for any aspect of the Linked Websites including the content therein."
+    },
+    {
+     "kind": "numbered",
+     "content": "If you do not agree to be governed by this terms and conditions, you are requested not to use this Website."
+    },
+    {
+     "kind": "numbered",
+     "content": "If you breach any of the terms and conditions contained in this Website, we reserve the right to terminate your right to use the Website forthwith without any notice to you. The provisions of these terms and conditions shall survive any such termination. You shall also be liable to indemnify the Developer/Promoter, its subsidiaries, associates, officers, agents and employees and defend and hold them harmless from any claim or demand or action arising out of any such breach by you. In case the Developer/Promoter fails to act with respect to a breach by you or any other party, such failure shall not constitute a waiver nor shall it preclude us from exercising our right to act in respect of subsequent breaches."
+    }
+   ]
+  },
+  {
+   "title": "Privacy Policy",
+   "paragraphs": [
+    {
+     "kind": "plain",
+     "content": "This privacy policy (together with our terms and conditions and any other documents referred to on it) sets out the basis on which any data we collect from you, or that you provide to us, will be processed by us. Please read the following carefully to understand our views and practices regarding your data and how we will treat it. By visiting www.homesatthegrand.com (\"Site\") to which this privacy policy applies or otherwise, you are accepting and consenting to the practices described in this privacy policy."
+    },
+    {
+     "kind": "heading",
+     "content": "WE MAY COLLECT AND PROCESS THE FOLLOWING DATA ABOUT YOU:"
+    },
+    {
+     "kind": "numbered",
+     "content": "Information you give us : You may give us information about you by filling in forms on our sites, or by submitting your CV, or by corresponding with us by phone, e-mail or otherwise or, by you interacting with any of (sub-contractors (including estate agents, sales agents and our professional advisors) engaged on our behalf. This includes information you provide when arrange property viewings with us, request brochures from us, complete an enquiry form, provide your CV and when you report a problem with our sites. The information you give us may include your name, address, e-mail address, phone number and any other information relevant to your enquiry or request for information or services and you may choose to provide to us from time to time."
+    },
+    {
+     "kind": "numbered",
+     "content": "Information we collect about you : We may automatically collect: technical information, including the IP address, your login information, browser type and version, time zone setting, browser plug-in types and versions, operating system and platform; and information about your visit, including the full URL clickstream to, through and from our sites; materials you viewed or searched for; page response times, download errors, length of visits to certain pages, page interaction information, and methods used to browse away from the page."
+    },
+    {
+     "kind": "numbered",
+     "content": "Information we receive from other sources : We may receive information about you if you use our sites. We also work closely with third parties (including, for example, analytics providers, search information providers, credit reference agencies) and may receive information about you from them."
+    },
+    {
+     "kind": "heading",
+     "content": "HOW WE USE COLLECTED DATA"
+    },
+    {
+     "kind": "plain",
+     "content": "We may collect and use your data including but not limited for the following purposes:"
+    },
+    {
+     "kind": "numbered",
+     "content": "To provide you with the information and services that you request from us relating to the projects on our Site."
+    },
+    {
+     "kind": "numbered",
+     "content": "To provide you with information about our other project(s)."
+    },
+    {
+     "kind": "numbered",
+     "content": "To provide you, or permit selected third parties to provide you, with information about our other project(s)"
+    },
+    {
+     "kind": "numbered",
+     "content": "To administer our Site and for internal operations, including troubleshooting, data analysis, testing, research, statistical and survey purposes."
+    },
+    {
+     "kind": "numbered",
+     "content": "To improve our Site to ensure that content is presented in the most effective manner for you and for your computer."
+    },
+    {
+     "kind": "numbered",
+     "content": "For complying with legal obligations (if any)."
+    },
+    {
+     "kind": "numbered",
+     "content": "For helping us respond to your customer service requests and support needs more efficiently."
+    },
+    {
+     "kind": "plain",
+     "content": "We will only contact you by e-mail, SMS, telephone with information about our other project(s), only if you have consented to this."
+    },
+    {
+     "kind": "heading",
+     "content": "DISCLOSURE OF YOUR INFORMATION"
+    },
+    {
+     "kind": "numbered",
+     "content": "We may share your personal information with any staff member of the builder/promoter."
+    },
+    {
+     "kind": "numbered",
+     "content": "We may also share your information with selected third parties including, where applicable: (i) business partners, suppliers and sub-contractors (including, but not limited to, estate agents, sales agents and our professional advisors) (ii) advertisers and advertising networks that require the data to select and serve relevant adverts to you and others; (iii) analytics and search engine providers that assist us in the improvement and optimisation of our Sites; (iv) to third party/ies in the event we sell or buy any business or assets; (v) if we are under a duty to disclose or share your personal data in order to comply with any legal obligation, or in order to enforce or apply our terms of use and other agreements; or to protect the rights, property, or safety of builder/promoter, our customers, or others. This includes exchanging information with other companies and organisations for the purposes of fraud protection and credit risk reduction; and (vii) as otherwise disclosed or permitted by law."
+    },
+    {
+     "kind": "numbered",
+     "content": "We may share your non sales related information such as cookies, email address, phone number etc, to third parties."
+    },
+    {
+     "kind": "heading",
+     "content": "WHERE WE STORE YOUR PERSONAL DATA"
+    },
+    {
+     "kind": "numbered",
+     "content": "The data that we collect from you may be transferred, stored and processed by staff who work for us or for one of our suppliers or one of our group companies. By submitting your personal data, you agree to this transfer, storing or processing. We will take all steps reasonably necessary to ensure that your data is treated securely."
+    },
+    {
+     "kind": "heading",
+     "content": "COOKIES"
+    },
+    {
+     "kind": "numbered",
+     "content": "Our Site may use cookies to distinguish you from other users of our Site. This helps us to provide you with a good experience when you browse our Sites and also allows us to improve our Site. By continuing to browse our Site, you are agreeing to our use of cookies."
+    },
+    {
+     "kind": "numbered",
+     "content": "Please note that third parties may also use cookies, over which we have no control."
+    },
+    {
+     "kind": "heading",
+     "content": "THIRD-PARTY WEBSITES"
+    },
+    {
+     "kind": "plain",
+     "content": "Our Site may contain links to third-party websites that are not owned or controlled by us. We are not responsible for the privacy practices or the content of such third-party websites. We are also not liable for any loss or damage that may occur to you on account of these third-party websites. We encourage the users to read the privacy policies of all such websites on visiting the same."
+    },
+    {
+     "kind": "heading",
+     "content": "RETENTION AND DISPOSAL OF DATA"
+    },
+    {
+     "kind": "plain",
+     "content": "We keep the data we collect about you on our systems or with third parties for as long as it is required for the purposes set out in this privacy policy and for legal or regulatory reasons. By submitting your data, you agree to this transfer, storing or processing."
+    },
+    {
+     "kind": "heading",
+     "content": "CHANGES TO OUR PRIVACY POLICY"
+    },
+    {
+     "kind": "plain",
+     "content": "We reserve the right to update or revise this privacy policy at any time without prior notice. Any changes will be effective immediately upon posting the updated privacy policy on our website. It is your responsibility to review this privacy policy periodically for any changes. Your continued use of the services following any changes to this privacy policy will be deemed to be your acceptance of those changes."
+    }
+   ]
+  }
+ ],
+ "legacyHeading": "Over 55 years of legacy in Mumbai's Real Estate.",
+ "legacyParas": [
+  "Under the leadership of Samir N. Bhojwani, the firm’s direction has always been — prominent locations and lavish layouts, blending thoughtful design with superior amenities, trusted by the top business and media industry leaders.",
+  "The firm has landmark projects on the way – at Carter Road, Pali Hill and South Mumbai."
+ ]
+}

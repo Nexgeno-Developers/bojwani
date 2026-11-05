@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+/// Admin panel users
+model Admin {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique @db.VarChar(191)
+  name         String?  @db.VarChar(191)
+  passwordHash String   @db.VarChar(191)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+/// Key/value store for every single text, image and toggle on the page
+model Setting {
+  key       String   @id @db.VarChar(100)
+  value     String   @db.Text
+  updatedAt DateTime @updatedAt
+}
+
+/// Uploaded files (images, QR codes, ...)
+model Media {
+  id           Int      @id @default(autoincrement())
+  filename     String   @db.VarChar(191)
+  originalName String   @db.VarChar(255)
+  mimeType     String   @db.VarChar(100)
+  size         Int
+  url          String   @db.VarChar(255)
+  createdAt    DateTime @default(now())
+}
+
+/// Top menu + "Experience" index entries
+model NavItem {
+  id          Int     @id @default(autoincrement())
+  label       String  @db.VarChar(100)
+  target      String  @db.VarChar(100)
+  number      String  @default("") @db.VarChar(10)
+  showInNav   Boolean @default(true)
+  showInIndex Boolean @default(true)
+  sortOrder   Int     @default(0)
+}
+
+/// Images of the "Residences" slider
+model ResidenceSlide {
+  id        Int     @id @default(autoincrement())
+  image     String  @db.VarChar(255)
+  alt       String  @default("") @db.VarChar(255)
+  position  String  @default("") @db.VarChar(50)
+  active    Boolean @default(true)
+  sortOrder Int     @default(0)
+}
+
+/// Cards of the "Highlights" section
+model Highlight {
+  id        Int     @id @default(autoincrement())
+  title     String  @db.VarChar(191)
+  subtitle  String  @default("") @db.VarChar(255)
+  icon      String  @db.Text
+  active    Boolean @default(true)
+  sortOrder Int     @default(0)
+}
+
+/// List of the "Amenities" section
+model Amenity {
+  id        Int     @id @default(autoincrement())
+  name      String  @db.VarChar(191)
+  icon      String  @db.Text
+  active    Boolean @default(true)
+  sortOrder Int     @default(0)
+}
+
+/// Accordions of the "Legal / fine print" section
+model LegalSection {
+  id         Int              @id @default(autoincrement())
+  title      String           @db.VarChar(191)
+  active     Boolean          @default(true)
+  sortOrder  Int              @default(0)
+  paragraphs LegalParagraph[]
+}
+
+/// kind: "numbered" (auto numbered, restarts after a heading), "heading" or "plain"
+model LegalParagraph {
+  id        Int          @id @default(autoincrement())
+  sectionId Int
+  kind      String       @default("numbered") @db.VarChar(20)
+  content   String       @db.Text
+  sortOrder Int          @default(0)
+  section   LegalSection @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+
+  @@index([sectionId])
+}
