@@ -8,6 +8,19 @@
 .hero-pic { display: none; }
 
 @media (max-width: 1023.98px) {
+  /* ---------- Touch scrolling ----------
+     site.css blocks vertical finger-scrolling on sections and sliders (touch-action: pan-x),
+     because desktop used a one-page-per-swipe script. Phones and tablets scroll normally,
+     so allow vertical panning everywhere (horizontal swipes on the sliders still work). */
+  html body.entered > section,
+  html body.entered > section.pg-tall { touch-action: pan-x pan-y pinch-zoom !important; }
+  html body .visual-track,
+  html body .amenity-track,
+  html body .portfolio-grid,
+  html body #resTrack .visual-slide,
+  html body #amTrack .visual-slide,
+  html body #amenityTrack .amenity-img { touch-action: pan-x pan-y pinch-zoom !important; }
+
   /* ---------- Hero: full uncropped image, text + button below ---------- */
   html body .hero,
   html body .hero.hero-black {
