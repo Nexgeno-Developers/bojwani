@@ -1,11 +1,13 @@
 /*
- * Mobile-only adjustments (phones, <= 760px). Desktop and tablet are untouched.
+ * Phone + tablet adjustments. Desktop (>= 1024px) is untouched.
+ *  - First block (<= 1023px): shared layout for phones and tablets, with phone sizes.
+ *  - Last block (761px - 1023px): tablet sizes and spacing, overriding the phone sizes.
  * Loaded after site.css; "html body" + !important is needed to beat the original !important rules.
  */
 
 .hero-pic { display: none; }
 
-@media (max-width: 760px) {
+@media (max-width: 1023.98px) {
   /* ---------- Hero: full uncropped image, text + button below ---------- */
   html body .hero,
   html body .hero.hero-black {
@@ -123,8 +125,8 @@
     width: max-content !important;
     max-width: 100%;
   }
-  /* Footer text: 40px above and below, like every section */
-  html body #legal .g-foot { padding-top: 40px !important; padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)) !important; }
+  /* Footer text: same space above and below as every section */
+  html body #legal .g-foot { padding-top: var(--sec-pad) !important; padding-bottom: calc(var(--sec-pad) + env(safe-area-inset-bottom, 0px)) !important; }
   html body #legal .g-foot > :last-child { margin-bottom: 0 !important; padding-bottom: 0 !important; }
   /* Experience: RERA / Legal buttons start 40px below the top bar, list follows them */
   html body .experience .ex-rera:not(.ex-legal) { top: calc(var(--navh, 57px) + 40px) !important; }
@@ -217,4 +219,76 @@
   /* ---------- Dialogs ---------- */
   html body .cd-in h3 { font-size: 17px !important; }
   html body .cd-in p { font-size: 14px !important; }
+}
+
+/* ==================== Tablet: 761px - 1023px ==================== */
+@media (min-width: 761px) and (max-width: 1023.98px) {
+  html body { --sec-pad: 56px; }
+
+  /* Hero: full image, but never taller than ~58% of the screen (keeps text + button visible in landscape) */
+  html body .hero .hero-pic img { width: auto; max-width: 100%; max-height: 58vh; margin: 0 auto; }
+  html body .hero .hero-text { padding: 30px 10vw 0 !important; }
+  html body .hero h1 { font-size: 50px !important; }
+  html body .hero .eyebrow { font-size: 13px !important; gap: 14px; margin-top: 14px !important; }
+  html body .hero .eyebrow::before,
+  html body .hero .eyebrow::after { width: 26px !important; }
+  html body .hero .sub { font-size: 19px !important; margin-top: 12px !important; }
+  html body .hero > .enter-btn { margin-top: 32px !important; padding: 12px 28px !important; min-height: 46px !important; font-size: 13.5px !important; gap: 12px !important; }
+  html body .hero > .enter-btn span { font-size: 17px !important; }
+  html body .hero .hero-pic .ai-tag { top: 14px; right: 14px; }
+
+  /* Top menu */
+  html body nav .logo { font-size: 16px !important; }
+  html body nav .links a { font-size: 14px !important; }
+
+  /* Experience index: buttons 56px below the top bar, list after them */
+  html body .experience .ex-rera { padding: 10px 18px !important; font-size: 11px !important; }
+  html body .experience .ex-rera:not(.ex-legal) { top: calc(var(--navh, 57px) + 56px) !important; }
+  html body .experience .ex-legal { top: calc(var(--navh, 57px) + 100px) !important; }
+  html body > section#experience { padding-top: calc(var(--navh, 57px) + 170px) !important; }
+  html body .experience .ex-t { font-size: 19px !important; }
+  html body .experience .ex-n { font-size: 12px !important; }
+
+  /* Residences */
+  html body #residences .res-cap.res-below { padding: 18px 8vw 0 !important; }
+  html body #residences .res-cap h2 { font-size: 28px !important; }
+  html body #residences .visual-dots { bottom: 14px !important; }
+  html body #residences .visual .ai-tag { bottom: 14px !important; right: 14px !important; }
+
+  /* Highlights */
+  html body #highlights .seal b { font-size: 14px !important; }
+  html body #highlights .intro p { font-size: 16px !important; }
+  html body #highlights .facts .fact b { font-size: 18px !important; }
+  html body #highlights .facts .fact span { font-size: 14px !important; }
+
+  /* Location */
+  html body #location .gl-text h2 { font-size: 28px !important; }
+  html body #location .gl-addr,
+  html body #location .gl-para { font-size: 15px !important; }
+  html body #location .gl-dir { padding: 13px 24px !important; font-size: 13px !important; gap: 10px !important; }
+  html body #location .gl-dir svg { width: 18px !important; height: 18px !important; }
+  html body #location .gl-dir span { font-size: 16px !important; }
+  html body #location .gl-map figcaption { font-size: 11px !important; }
+
+  /* Amenities */
+  html body #amenities .gm-title { font-size: 28px !important; }
+  html body #amenities .gm-name { font-size: 14px !important; }
+  html body #amenities .gm-more { font-size: 22px !important; }
+
+  /* Legacy */
+  html body #legacy h2 { font-size: 30px !important; margin-bottom: 24px !important; }
+  html body #legacy p { font-size: 16.5px !important; }
+
+  /* Legal & footer */
+  html body #legal h2 { font-size: 30px !important; }
+  html body #legal .intro p { font-size: 16px !important; }
+  html body #legal summary { font-size: 17px !important; }
+  html body #legal details p { font-size: 15px !important; }
+  html body #legal .g-contact-btn { padding: 10px 18px !important; font-size: 11px !important; }
+  html body #legal .footer-top { font-size: 12.5px !important; }
+  html body #legal .footer-rera { font-size: 11px !important; }
+
+  /* Dialogs */
+  html body .cd-in h3 { font-size: 18px !important; }
+  html body .cd-in p { font-size: 15px !important; }
 }

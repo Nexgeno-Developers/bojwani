@@ -64,9 +64,9 @@ export default async function HomePage() {
       </nav>
 
       <header className="hero hero-black">
-        {/* Mobile only: full (uncropped) hero image. The 1px source stops desktops from downloading it. */}
+        {/* Phones + tablets only: full (uncropped) hero image. The 1px source stops desktops from downloading it. */}
         <picture className="hero-pic">
-          <source media="(min-width: 761px)" srcSet="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+          <source media="(min-width: 1024px)" srcSet="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={s.hero_image} alt="" fetchPriority="high" />
           <span className="ai-tag">{ai}</span>
@@ -277,7 +277,7 @@ export default async function HomePage() {
         </div>
       </dialog>
 
-      <Script src="/site.js?v=3" strategy="afterInteractive" />
+      <Script src="/site.js?v=4" strategy="afterInteractive" />
     </>
   );
 }
