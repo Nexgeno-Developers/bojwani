@@ -1316,3 +1316,4 @@ dialog.mod-dlg .iconic-in{padding-top:calc(30px + env(safe-area-inset-top))!impo
 @media(max-width:760px){.ld-pg figcaption{top:6px;left:6px;font-size:10px!important;padding:5px 9px!important}}
 .ld-pg figcaption{display:none!important}@media(min-width:761px){#gallery #amenityTrack .ls-card .amenity-body h3{font-size:clamp(24px,2.3vw,38px)!important;overflow-wrap:break-word}}.experience .ex-legal{top:calc(var(--navh,64px) + 80px);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box;min-width:0}@media(max-width:760px){.experience .ex-legal{top:calc(var(--navh,58px) + 64px)}}body>section.experience>.ex-legal{width:auto!important}
 #highlights .status-seals{grid-template-columns:auto!important;width:fit-content!important;max-width:100%!important}#highlights .seal b{margin-top:0!important}
+body {overflow-x: hidden;}
