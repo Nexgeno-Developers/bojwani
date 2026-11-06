@@ -1,8 +1,9 @@
 /*
  * Phone + tablet adjustments. Desktop (>= 1024px) is untouched.
  *  - First block (<= 1023px): shared layout for phones and tablets, with phone sizes.
- *  - Tablet block (761px - 1023px): tablet sizes, natural-height sections, free scrolling.
- *  - Phone block (<= 760px): full-screen sections, one section per swipe (like desktop).
+ *  - Tablet block (761px - 1023px): tablet sizes and spacing.
+ *  - "One section per screen" block (<= 1023px): full-screen sections, one section per swipe (like desktop).
+ *  - Phone block (<= 760px): extra tightening so Location and Legal fit small phone screens.
  * Loaded after site.css; "html body" + !important is needed to beat the original !important rules.
  */
 
@@ -230,19 +231,6 @@
 @media (min-width: 761px) and (max-width: 1023.98px) {
   html body { --sec-pad: 56px; }
 
-  /* ---------- Touch scrolling (tablets scroll freely) ----------
-     site.css blocks vertical finger-scrolling on sections and sliders (touch-action: pan-x)
-     for the one-page-per-swipe script. Tablets scroll normally, so allow vertical panning
-     everywhere (horizontal swipes on the sliders still work). */
-  html body.entered > section,
-  html body.entered > section.pg-tall { touch-action: pan-x pan-y pinch-zoom !important; }
-  html body .visual-track,
-  html body .amenity-track,
-  html body .portfolio-grid,
-  html body #resTrack .visual-slide,
-  html body #amTrack .visual-slide,
-  html body #amenityTrack .amenity-img { touch-action: pan-x pan-y pinch-zoom !important; }
-
   /* Hero: full image, but never taller than ~58% of the screen (keeps text + button visible in landscape) */
   html body .hero .hero-pic img { width: auto; max-width: 100%; max-height: 58vh; margin: 0 auto; }
   html body .hero .hero-text { padding: 30px 10vw 0 !important; }
@@ -305,16 +293,22 @@
   html body #legal .g-contact-btn { padding: 10px 18px !important; font-size: 11px !important; }
   html body #legal .footer-top { font-size: 12.5px !important; }
   html body #legal .footer-rera { font-size: 11px !important; }
+  /* fits one screen in landscape too */
+  html body #legal .legal-list details { padding-top: 16px !important; padding-bottom: 16px !important; }
+  html body #legal .intro p { margin-bottom: 0 !important; }
+  html body #legal .legal-list { margin-top: 24px !important; }
+  html body #legal .g-contact-row { margin-top: 18px !important; margin-bottom: 20px !important; }
+  html body #legal .g-foot { padding-top: 32px !important; padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px)) !important; }
 
   /* Dialogs */
   html body .cd-in h3 { font-size: 18px !important; }
   html body .cd-in p { font-size: 15px !important; }
 }
 
-/* ==================== Phones: <= 760px ==================== */
+/* ==================== Phones + tablets: one section per screen ==================== */
 /* Like desktop: every section fills the screen and one swipe moves exactly one section
    (handled by the original pager in site.js). Content is centred between the top bar and the bottom. */
-@media (max-width: 760px) {
+@media (max-width: 1023.98px) {
   html body > section#experience,
   html body > section#residences,
   html body > section#highlights,
@@ -345,7 +339,10 @@
   html body #residences .res-below h2 { color: #8a6a33 !important; }
   /* keep the slider at the picture's own 16:9 shape instead of stretching to fill the screen */
   html body #residences .visual { flex: none !important; }
+}
 
+/* ==================== Phones only: <= 760px ==================== */
+@media (max-width: 760px) {
   /* Location: fits on one screen (shorter map, tighter gap above the button) */
   html body #location .gl-grid { row-gap: 16px !important; gap: 16px !important; }
   html body #location .gl-map img { max-height: min(24vh, 200px) !important; object-fit: cover; }
