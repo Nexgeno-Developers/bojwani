@@ -1,0 +1,220 @@
+/*
+ * Mobile-only adjustments (phones, <= 760px). Desktop and tablet are untouched.
+ * Loaded after site.css; "html body" + !important is needed to beat the original !important rules.
+ */
+
+.hero-pic { display: none; }
+
+@media (max-width: 760px) {
+  /* ---------- Hero: full uncropped image, text + button below ---------- */
+  html body .hero,
+  html body .hero.hero-black {
+    background: #1e1d1b !important;
+    /* no !important here: the script hides the hero with an inline display:none after Experience is tapped */
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    padding: calc(env(safe-area-inset-top, 0px) + 20px) 0 calc(env(safe-area-inset-bottom, 0px) + 28px) !important;
+  }
+  html body .hero::before,
+  html body .hero::after { display: none !important; }
+  html body .hero > .hero-ai { display: none !important; }
+
+  html body .hero .hero-pic {
+    display: block;
+    position: relative;
+    width: 100%;
+    flex: none;
+  }
+  html body .hero .hero-pic img { display: block; width: 100%; height: auto; }
+  html body .hero .hero-pic::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    height: 28%;
+    background: linear-gradient(180deg, transparent, #1e1d1b);
+    pointer-events: none;
+  }
+  html body .hero .hero-pic .ai-tag { position: absolute; top: 10px; right: 10px; bottom: auto; left: auto; z-index: 2; }
+
+  html body .hero .hero-text {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 22px 7vw 0 !important;
+    text-align: center !important;
+  }
+  html body .hero h1,
+  html body .hero .sub { text-align: center !important; max-width: none !important; }
+  html body .hero h1 { font-size: 34px !important; letter-spacing: .04em; }
+  html body .hero .eyebrow { display: flex !important; justify-content: center !important; text-align: center !important; font-size: 11px !important; gap: 10px; margin-top: 12px !important; }
+  html body .hero .eyebrow::before,
+  html body .hero .eyebrow::after { width: 18px !important; }
+  html body .hero .sub { font-size: 14px !important; margin-top: 10px !important; }
+  html body .hero > .enter-btn {
+    position: static !important;
+    align-self: center;
+    margin: 26px 0 0 !important;
+    padding: 11px 24px !important;
+    min-height: 44px !important;
+    font-size: 12.5px !important;
+    gap: 10px !important;
+  }
+  html body .hero > .enter-btn span { font-size: 16px !important; }
+
+  /* ---------- Sections: natural height on phones (no forced 100vh) ---------- */
+  html body > section#experience,
+  html body > section#residences,
+  html body > section#highlights,
+  html body > section#location,
+  html body > section#amenities.g-amen,
+  html body > section#legacy,
+  html body > section#legal {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  /* Equal spacing: every section gets the same top and bottom padding (--sec-pad).
+     Menu jumps scroll to just below the fixed top bar (see site.js), so no nav offset is needed here. */
+  html body { --sec-pad: 40px; }
+  html body > section#residences,
+  html body > section#highlights,
+  html body > section#location,
+  html body > section#amenities.g-amen,
+  html body > section#legacy,
+  html body > section#legal {
+    padding-top: var(--sec-pad) !important;
+    padding-bottom: var(--sec-pad) !important;
+    scroll-margin-top: var(--navh, 57px) !important;
+  }
+  /* Experience is the first screen under the top bar, and its RERA / Legal buttons sit above the list */
+  html body > section#experience {
+    padding-top: calc(var(--navh, 57px) + 100px) !important;
+    padding-bottom: var(--sec-pad) !important;
+  }
+  html body #amenities .gm-in,
+  html body #legacy .intro,
+  html body #highlights .intro,
+  html body #legal .intro,
+  html body #location .gl-grid { margin-top: 0 !important; }
+  /* Footer reaches the very bottom: no section padding under it, so only the footer background shows */
+  html body > section#legal { padding-bottom: 0 !important; }
+  html body #legal .g-foot { margin-bottom: 0 !important; }
+
+  /* Exact 40px: strip the outer margins of the first / last element inside each section */
+  html body #legacy .intro > :first-child,
+  html body #legal .intro > :first-child,
+  html body #highlights .intro > :first-child,
+  html body #amenities .gm-in > :first-child,
+  html body #amenities .gm-title { margin-top: 0 !important; }
+  html body #legacy .intro > :last-child,
+  html body #amenities .gm-in > :last-child,
+  html body #amenities .gm-more { margin-bottom: 0 !important; }
+  /* Amenities: "Artist Impression" tag sits in the flow (right-aligned) instead of hugging the bottom edge */
+  html body #amenities.g-amen > .ai-tag.gm-ai {
+    position: static !important;
+    align-self: flex-end;
+    margin: 18px 0 0 auto !important;
+    inset: auto !important;
+    width: max-content !important;
+    max-width: 100%;
+  }
+  /* Footer text: 40px above and below, like every section */
+  html body #legal .g-foot { padding-top: 40px !important; padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)) !important; }
+  html body #legal .g-foot > :last-child { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+  /* Experience: RERA / Legal buttons start 40px below the top bar, list follows them */
+  html body .experience .ex-rera:not(.ex-legal) { top: calc(var(--navh, 57px) + 40px) !important; }
+  html body .experience .ex-legal { top: calc(var(--navh, 57px) + 78px) !important; }
+  html body > section#experience { padding-top: calc(var(--navh, 57px) + 126px) !important; }
+
+  /* ---------- Residences: full (uncropped) images, caption below ---------- */
+  html body > section#residences { padding-left: 0 !important; padding-right: 0 !important; overflow: visible !important; }
+  html body #residences .visual {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9;
+    margin: 0 !important;
+  }
+  html body #residences .visual-track { position: absolute !important; inset: 0 !important; height: 100% !important; min-height: 0 !important; }
+  html body #residences .visual-slide { height: 100% !important; min-height: 0 !important; background-size: cover !important; }
+  html body #residences .visual-slide::before { display: none !important; }
+  html body #residences .visual-dots { bottom: 10px !important; }
+  html body #residences .visual .ai-tag { bottom: 10px !important; right: 10px !important; }
+  html body #residences .res-cap.res-below {
+    position: static !important;
+    padding: 14px 6vw 0 !important;
+  }
+  html body #residences .res-below h2 { color: var(--gold-deep, #8a6a33) !important; text-shadow: none !important; }
+
+  /* ---------- Buttons: smaller on phones ---------- */
+  html body .experience .ex-rera { padding: 8px 14px !important; font-size: 9.5px !important; min-height: 0 !important; line-height: 1 !important; }
+  html body #location .gl-dir {
+    display: inline-flex !important;
+    width: auto !important;
+    align-self: flex-start;
+    padding: 11px 20px !important;
+    min-height: 0 !important;
+    font-size: 11.5px !important;
+    gap: 8px !important;
+  }
+  html body #location .gl-dir svg { width: 16px !important; height: 16px !important; }
+  html body #location .gl-dir span { font-size: 14px !important; line-height: 1 !important; }
+  html body #location .gl-dir { line-height: 1 !important; }
+  html body #legal .g-contact-btn { padding: 8px 14px !important; font-size: 9.5px !important; min-height: 0 !important; }
+  html body .hero > .enter-btn { padding: 9px 20px !important; min-height: 38px !important; font-size: 11.5px !important; }
+  html body .hero > .enter-btn span { font-size: 14px !important; }
+
+  /* ---------- Top menu ---------- */
+  html body nav .logo { font-size: 15px !important; }
+  html body nav .links a { font-size: 13.5px !important; }
+
+  /* ---------- Experience index ---------- */
+  html body .experience .ex-t { font-size: 15px !important; }
+  html body .experience .ex-n { font-size: 11px !important; }
+  html body .experience .ex-rera { font-size: 10px !important; }
+
+  /* ---------- Residences ---------- */
+  html body #residences .res-cap h2 { font-size: 21px !important; line-height: 1.15 !important; }
+
+  /* ---------- Highlights ---------- */
+  html body #highlights .seal b { font-size: 12px !important; }
+  html body #highlights .intro p { font-size: 14.5px !important; line-height: 1.6 !important; }
+  html body #highlights .facts .fact b { font-size: 13px !important; line-height: 1.2 !important; }
+  html body #highlights .facts .fact span { font-size: 11px !important; line-height: 1.35 !important; }
+
+  /* ---------- Location ---------- */
+  html body #location .gl-text h2 { font-size: 21px !important; line-height: 1.15 !important; }
+  html body #location .gl-addr { font-size: 13.5px !important; line-height: 1.5 !important; }
+  html body #location .gl-para { font-size: 13.5px !important; line-height: 1.6 !important; }
+  html body #location .gl-map figcaption { font-size: 10px !important; }
+
+  /* ---------- Amenities ---------- */
+  html body #amenities .gm-title { font-size: 21px !important; line-height: 1.15 !important; }
+  html body #amenities .gm-name { font-size: 12px !important; }
+  html body #amenities .gm-more { font-size: 17px !important; line-height: 1.25 !important; }
+
+  /* ---------- Legacy ---------- */
+  html body #legacy h2 { font-size: 24px !important; line-height: 1.15 !important; margin-bottom: 20px !important; }
+  html body #legacy p { font-size: 14.5px !important; line-height: 1.65 !important; }
+
+  /* ---------- Legal & footer ---------- */
+  html body #legal h2 { font-size: 24px !important; line-height: 1.15 !important; }
+  html body #legal .intro p { font-size: 14.5px !important; line-height: 1.6 !important; }
+  html body #legal summary { font-size: 15px !important; }
+  html body #legal details p { font-size: 13.5px !important; line-height: 1.6 !important; }
+  html body #legal .g-contact-btn { font-size: 10px !important; }
+  html body #legal .footer-top { font-size: 10.5px !important; line-height: 1.8 !important; }
+  html body #legal .footer-rera { font-size: 10px !important; }
+
+  /* ---------- Dialogs ---------- */
+  html body .cd-in h3 { font-size: 17px !important; }
+  html body .cd-in p { font-size: 14px !important; }
+}

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { getSettings } from "@/lib/content";
 import "./site.css";
+import "./mobile.css";
 
 export const dynamic = "force-dynamic";
 

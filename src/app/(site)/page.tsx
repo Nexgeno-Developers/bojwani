@@ -64,6 +64,13 @@ export default async function HomePage() {
       </nav>
 
       <header className="hero hero-black">
+        {/* Mobile only: full (uncropped) hero image. The 1px source stops desktops from downloading it. */}
+        <picture className="hero-pic">
+          <source media="(min-width: 761px)" srcSet="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={s.hero_image} alt="" fetchPriority="high" />
+          <span className="ai-tag">{ai}</span>
+        </picture>
         <div className="hero-text">
           <h1>{s.hero_title}</h1>
           <div className="eyebrow">{s.hero_eyebrow}</div>
@@ -270,7 +277,7 @@ export default async function HomePage() {
         </div>
       </dialog>
 
-      <Script src="/site.js?v=1" strategy="afterInteractive" />
+      <Script src="/site.js?v=3" strategy="afterInteractive" />
     </>
   );
 }
