@@ -10,7 +10,9 @@
     "db:migrate": "prisma migrate dev",
     "db:seed": "prisma db seed",
     "db:reset": "prisma db push --force-reset && prisma db seed",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "db:verify": "node scripts/verify-db.cjs",
+    "db:check-drift": "prisma migrate diff --from-schema-datasource prisma/schema.prisma --to-schema-datamodel prisma/schema.prisma"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

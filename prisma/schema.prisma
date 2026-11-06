@@ -1,3 +1,7 @@
+// Every model maps to its lowercase MySQL table with @@map. Without it Prisma looks for
+// "Setting", "NavItem", ... which do not exist on case-sensitive (Linux) MySQL servers,
+// where the tables are stored as "setting", "navitem", ... (P2021 "table does not exist").
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,11 +14,13 @@ datasource db {
 /// Admin panel users
 model Admin {
   id           Int      @id @default(autoincrement())
-  email        String   @unique @db.VarChar(191)
+  email        String   @unique(map: "Admin_email_key") @db.VarChar(191)
   name         String?  @db.VarChar(191)
   passwordHash String   @db.VarChar(191)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
+
+  @@map("admin")
 }
 
 /// Key/value store for every single text, image and toggle on the page
@@ -22,6 +28,8 @@ model Setting {
   key       String   @id @db.VarChar(100)
   value     String   @db.Text
   updatedAt DateTime @updatedAt
+
+  @@map("setting")
 }
 
 /// Uploaded files (images, QR codes, ...)
@@ -33,6 +41,8 @@ model Media {
   size         Int
   url          String   @db.VarChar(255)
   createdAt    DateTime @default(now())
+
+  @@map("media")
 }
 
 /// Top menu + "Experience" index entries
@@ -44,6 +54,8 @@ model NavItem {
   showInNav   Boolean @default(true)
   showInIndex Boolean @default(true)
   sortOrder   Int     @default(0)
+
+  @@map("navitem")
 }
 
 /// Images of the "Residences" slider
@@ -54,6 +66,8 @@ model ResidenceSlide {
   position  String  @default("") @db.VarChar(50)
   active    Boolean @default(true)
   sortOrder Int     @default(0)
+
+  @@map("residenceslide")
 }
 
 /// Cards of the "Highlights" section
@@ -64,6 +78,8 @@ model Highlight {
   icon      String  @db.Text
   active    Boolean @default(true)
   sortOrder Int     @default(0)
+
+  @@map("highlight")
 }
 
 /// List of the "Amenities" section
@@ -73,6 +89,8 @@ model Amenity {
   icon      String  @db.Text
   active    Boolean @default(true)
   sortOrder Int     @default(0)
+
+  @@map("amenity")
 }
 
 /// Accordions of the "Legal / fine print" section
@@ -82,6 +100,8 @@ model LegalSection {
   active     Boolean          @default(true)
   sortOrder  Int              @default(0)
   paragraphs LegalParagraph[]
+
+  @@map("legalsection")
 }
 
 /// kind: "numbered" (auto numbered, restarts after a heading), "heading" or "plain"
@@ -91,7 +111,8 @@ model LegalParagraph {
   kind      String       @default("numbered") @db.VarChar(20)
   content   String       @db.Text
   sortOrder Int          @default(0)
-  section   LegalSection @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  section   LegalSection @relation(fields: [sectionId], references: [id], onDelete: Cascade, map: "LegalParagraph_sectionId_fkey")
 
-  @@index([sectionId])
+  @@index([sectionId], map: "LegalParagraph_sectionId_idx")
+  @@map("legalparagraph")
 }
