@@ -275,6 +275,13 @@
   html body #location .gl-dir svg { width: 18px !important; height: 18px !important; }
   html body #location .gl-dir span { font-size: 16px !important; }
   html body #location .gl-map figcaption { font-size: 11px !important; }
+  /* fits one screen: map limited to ~36% of the screen height, tighter gaps around the text */
+  html body #location .gl-grid { row-gap: 18px !important; }
+  html body #location .gl-map img { max-height: min(36vh, 360px) !important; object-fit: cover; }
+  html body #location .gl-map figcaption { margin-top: 6px !important; }
+  html body #location .gl-text h2 { margin-top: 0 !important; margin-bottom: 14px !important; }
+  html body #location .gl-para { margin-bottom: 0 !important; }
+  html body #location .gl-dir { margin-top: 20px !important; }
 
   /* Amenities */
   html body #amenities .gm-title { font-size: 28px !important; }
