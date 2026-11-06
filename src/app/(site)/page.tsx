@@ -277,7 +277,7 @@ export default async function HomePage() {
         </div>
       </dialog>
 
-      <Script src="/site.js?v=4" strategy="afterInteractive" />
+      <Script src="/site.js?v=5" strategy="afterInteractive" />
     </>
   );
 }

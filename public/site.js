@@ -242,7 +242,7 @@ document.addEventListener('click',function(e){var t=document.getElementById('nav
  function canInner(dir){var i=idx(),s=secs[i],top=s.offsetTop,bot=top+s.offsetHeight,y=window.scrollY;
    if(!tall(s))return false;
    if(dir>0)return y+H()<bot-2; else return y>top+2;}
- function active(){return document.body.classList.contains('entered')&&!document.querySelector('dialog[open]')&&window.innerWidth>1023;}/* phones + tablets: normal free scrolling */
+ function active(){return document.body.classList.contains('entered')&&!document.querySelector('dialog[open]')&&!(window.innerWidth>760&&window.innerWidth<=1023);}/* tablets: normal free scrolling; phones + desktop: one section per swipe */
  function step(dir){var i=idx(),s=secs[i],y=window.scrollY;
    if(dir>0){if(y<s.offsetTop-2){go(i);return;}go(i+1);}
    else{if(y>s.offsetTop+2&&!tall(s)){go(i);return;}var p=secs[i-1];if(!p)return;go(i-1,tall(p)?p.offsetTop+p.offsetHeight-H():null);}}
@@ -410,7 +410,7 @@ document.addEventListener('click',function(e){var t=document.getElementById('nav
   cover.classList.add('on');
   setTimeout(function(){
    var r=document.documentElement,old=r.style.scrollBehavior;r.style.scrollBehavior='auto';
-   var off=(window.innerWidth<=1023&&t.id!=='experience')?((document.querySelector('nav')||{}).offsetHeight||0):0;/* phones + tablets: land just below the fixed top bar */window.scrollTo(0,Math.max(0,t.offsetTop-off));
+   var off=(window.innerWidth>760&&window.innerWidth<=1023&&t.id!=='experience')?((document.querySelector('nav')||{}).offsetHeight||0):0;/* tablets: land just below the fixed top bar (phone sections already include it) */window.scrollTo(0,Math.max(0,t.offsetTop-off));
    r.style.scrollBehavior=old;
    requestAnimationFrame(function(){requestAnimationFrame(function(){cover.classList.remove('on');busy=false;});});
   },230);
