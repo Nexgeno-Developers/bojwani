@@ -8,6 +8,10 @@
 .hero-pic { display: none; }
 
 @media (max-width: 1023.98px) {
+  /* Full-screen toggle button: not shown on phones and tablets */
+  html body .fs-btn,
+  html body.entered.fs-ok .fs-btn { display: none !important; }
+
   /* ---------- Touch scrolling ----------
      site.css blocks vertical finger-scrolling on sections and sliders (touch-action: pan-x),
      because desktop used a one-page-per-swipe script. Phones and tablets scroll normally,
