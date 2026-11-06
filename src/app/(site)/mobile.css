@@ -345,4 +345,11 @@
   html body #residences .res-below h2 { color: #8a6a33 !important; }
   /* keep the slider at the picture's own 16:9 shape instead of stretching to fill the screen */
   html body #residences .visual { flex: none !important; }
+
+  /* Location: fits on one screen (shorter map, tighter gap above the button) */
+  html body #location .gl-grid { row-gap: 16px !important; gap: 16px !important; }
+  html body #location .gl-map img { max-height: min(24vh, 200px) !important; object-fit: cover; }
+  html body #location .gl-map figcaption { margin-top: 6px !important; }
+  html body #location .gl-para { margin-bottom: 0 !important; }
+  html body #location .gl-dir { margin-top: 18px !important; }
 }
